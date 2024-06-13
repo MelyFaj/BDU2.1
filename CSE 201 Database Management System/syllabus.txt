@@ -1,0 +1,13 @@
+Section A
+Sharding and Scaling
+MongoDB, Casandra
+Partitioning and Replication
+
+Section B
+Transaction Processing
+Indexing
+B+ Tree
+NoSQL: CAP Theorem, BASE Theorem, NoSQL Database Types: Key Value, Column, Document, Graph
+
+drive link:
+https://drive.google.com/drive/folders/1WLqFvBJAoxAOnE5uN0ZTOP5B-mnVA31x
