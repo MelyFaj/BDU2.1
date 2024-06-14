@@ -1,0 +1,75 @@
+>>> while(1): number reversing
+...     n=int(input())
+...     r=0
+...     while(n!=0):
+...         m=n%10
+...         n=int(n/10)
+...         r=(r*10)+m
+...     print(r)
+...
+1234
+4321
+54321
+12345
+6453
+3546
+0090
+9
+
+
+
+Code: summing leading and trailing digits
+#Mehrin Farzana
+#2101013
+
+while(1):
+    n=int(input())
+    x=n
+    r=0
+    while(n!=0):
+        m=n%10
+        if(n==x):
+            r=m
+        n=int(n/10)
+        if(n==0):
+            r+=m
+    print(r)
+
+
+IO:
+1234
+5
+5436
+11
+243
+5
+890
+8
+090
+9
+90
+9
+909
+18
+
+
+
+
+Code: Fibonacci-sequence-sum till nth term
+#Mehrin Farzana
+#2101013
+
+while(1):
+    n=int(input())
+    a=0
+    b=0
+    sum=1
+    c=1
+    if(n<=0):
+        sum=0
+    for i in range(1,n):
+        a=b
+        b=c
+        c=a+b
+        sum=sum+c
+    print(sum)

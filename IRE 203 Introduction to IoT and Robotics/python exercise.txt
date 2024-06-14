@@ -1,0 +1,443 @@
+Microsoft Windows [Version 10.0.22631.3447]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\BAB AL SAFA>py
+Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print(range(1,6))
+range(1, 6)
+>>> print(for i in range(1,6))
+  File "<stdin>", line 1
+    print(for i in range(1,6))
+          ^^^
+SyntaxError: invalid syntax
+>>> for i in range(1,6):
+...  print(i)
+...
+1
+2
+3
+4
+5
+>>> for i in range(1,6):
+... print(i)
+  File "<stdin>", line 2
+    print(i)
+    ^
+IndentationError: expected an indented block after 'for' statement on line 1
+>>> for i in "Bangladesh":
+...  print(i)
+...
+B
+a
+n
+g
+l
+a
+d
+e
+s
+h
+>>> for i in 9:
+...  print(i)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> for i in range(11, 2):
+...  print(i)
+...
+>>>
+>>> for i in range(1, 11, 2):
+...  print(i)
+...
+1
+3
+5
+7
+9
+>>> for i in range(2, 11, 2):
+...  print(i)
+...
+2
+4
+6
+8
+10
+>>> for i in range(1, 11):
+...  if(i%2==0)
+  File "<stdin>", line 2
+    if(i%2==0)
+              ^
+SyntaxError: expected ':'
+>>> for i in range(1, 11):
+...  if(i%2==0):
+...   print(i)
+...
+2
+4
+6
+8
+10
+>>>
+>>> while(1):
+...
+  File "<stdin>", line 2
+
+    ^
+IndentationError: expected an indented block after 'while' statement on line 1
+>>>
+>>> x=input()
+12
+>>> print(x)
+12
+>>> print(x+2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> x=(int)input()
+  File "<stdin>", line 1
+    x=(int)input()
+           ^^^^^
+SyntaxError: invalid syntax
+>>> x=5
+>>> x=input()
+3
+>>> print(x+2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> x=input().int
+3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'int'
+>>> x=int.input()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: type object 'int' has no attribute 'input'
+>>> x=int(input())
+12
+>>> print(x+2)
+14
+>>> while(1):
+...  x=int(input())
+...  for i in range (2,x):
+...   if(x%i==0):
+...    print("not prime")
+...
+...
+12
+not prime
+not prime
+not prime
+not prime
+3
+
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: invalid literal for int() with base 10: ''
+>>> while(1):
+...  x=int(input())
+...  for i in range (2,x):
+... .
+  File "<stdin>", line 4
+    .
+IndentationError: expected an indented block after 'for' statement on line 3
+>>> while(1):
+...  x=int(input())
+...  flag=0
+...  for i in range (2,x):
+...   if(x%i==0):
+...    print("not prime")
+...    flag=1
+...    break
+...  if(flag==0):
+...   print("prime")
+...
+1
+prime
+2
+prime
+3
+prime
+4
+not prime
+5
+prime
+6
+not prime
+7
+prime
+8
+not prime
+9
+not prime
+0
+prime
+10
+not prime
+11
+prime
+12
+not prime
+13
+prime
+14
+not prime
+15
+not prime
+16
+not prime
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>> while(1):
+...  x=int(input())
+...  flag=0
+...  for i in range(2,x):
+...   if(x==0 or x=1 or x%i==0):
+  File "<stdin>", line 5
+    if(x==0 or x=1 or x%i==0):
+                ^
+SyntaxError: invalid syntax
+>>> while(1):
+...  x=int(input))
+  File "<stdin>", line 2
+    x=int(input))
+                ^
+SyntaxError: unmatched ')'
+>>> while(1):
+...  x=int(input())
+...  flag=0
+...  for i in range(2,x):
+...   if(x==0 or x==1 or x%i==0):
+...    print("Not prime")
+...    flag=1
+...    break
+...  if(flag==0):
+...  print("Prime")
+  File "<stdin>", line 10
+    print("Prime")
+    ^
+IndentationError: expected an indented block after 'if' statement on line 9
+>>> while(1):
+...  x=int(input())
+...  flag=0
+...  for i in range(2,(x+1)/2):
+...   if(x==0 or x==1 or x%i==0):
+...    print("Not prime")
+...    flag=1
+...    break
+...  if(flag==0):
+...   print("Prime")
+...
+0
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+TypeError: 'float' object cannot be interpreted as an integer
+>>> while(1):
+...  x=int(input())
+...  flag=0
+...  for i in range(2,int((x+1)/2)):
+...   if(x==0 or x==1 or x%i==0):
+...    print("Not prime")
+...    flag=1
+...    break
+...  if(flag==0):
+...   print("Prime")
+...
+0
+Prime
+1
+Prime
+2
+Prime
+
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: invalid literal for int() with base 10: ''
+>>> while(1):
+...  x=int(input())
+...  if(x==0 or x==1):
+...   print("Not prime")
+...
+
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: invalid literal for int() with base 10: ''
+>>> x=int(input())
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: ''
+>>>
+>>> while(1):
+...  x=int(input())
+...  for i in range(1,x+1):
+...   for j in range(1,i+1):
+...    print("*")
+...
+1
+*
+2
+*
+*
+*
+3
+*
+*
+*
+*
+*
+*
+3
+*
+*
+*
+*
+*
+*
+
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: invalid literal for int() with base 10: ''
+>>> while(1):
+...  x=int(input())
+...  for i in range(1,x+1):
+...   for j in range(1,i+1):
+...    print("*", end="")
+...   print("\n")
+...
+1
+*
+
+2
+*
+
+**
+
+3
+*
+
+**
+
+***
+
+4
+*
+
+**
+
+***
+
+****
+
+5
+*
+
+**
+
+***
+
+****
+
+*****
+
+6
+*
+
+**
+
+***
+
+****
+
+*****
+
+******
+
+
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: invalid literal for int() with base 10: ''
+>>> while(1):
+...  x=int(input())
+...  for i in range(1,x+1):
+...   for j in range(i+1,1, -1):
+...    print("*", end="")
+...   print("\n")
+...
+1
+*
+
+2
+*
+
+**
+
+3
+*
+
+**
+
+***
+
+4
+*
+
+**
+
+***
+
+****
+
+
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: invalid literal for int() with base 10: ''
+>>> while(1):
+...  x=int(input())
+...  for i in range(x,0, -1):
+...   for j in range(i,0, -1):
+...    print("*", end="")
+...   print("\n")
+...
+1
+*
+
+2
+**
+
+*
+
+3
+***
+
+**
+
+*
+
+4
+****
+
+***
+
+**
+
+*
+
+5
+*****
+
+****
+
+***
+
+**
+
+*
+
+^A
